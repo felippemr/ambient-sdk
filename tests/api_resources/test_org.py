@@ -92,7 +92,7 @@ class TestOrg:
     @parametrize
     def test_method_retrieve(self, client: AmbientSDK) -> None:
         org = client.org.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         )
         assert_matches_type(Org, org, path=["response"])
@@ -101,7 +101,7 @@ class TestOrg:
     @parametrize
     def test_raw_response_retrieve(self, client: AmbientSDK) -> None:
         response = client.org.with_raw_response.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         )
 
@@ -114,7 +114,7 @@ class TestOrg:
     @parametrize
     def test_streaming_response_retrieve(self, client: AmbientSDK) -> None:
         with client.org.with_streaming_response.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         ) as response:
             assert not response.is_closed
@@ -130,7 +130,7 @@ class TestOrg:
     def test_path_params_retrieve(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
             client.org.with_raw_response.retrieve(
-                id={},
+                id=0,
                 id_type="",
             )
 
@@ -456,7 +456,7 @@ class TestAsyncOrg:
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         org = await async_client.org.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         )
         assert_matches_type(Org, org, path=["response"])
@@ -465,7 +465,7 @@ class TestAsyncOrg:
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.org.with_raw_response.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         )
 
@@ -478,7 +478,7 @@ class TestAsyncOrg:
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.org.with_streaming_response.retrieve(
-            id={},
+            id=0,
             id_type="idType",
         ) as response:
             assert not response.is_closed
@@ -494,7 +494,7 @@ class TestAsyncOrg:
     async def test_path_params_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
             await async_client.org.with_raw_response.retrieve(
-                id={},
+                id=0,
                 id_type="",
             )
 

@@ -115,7 +115,7 @@ class OrgResource(SyncAPIResource):
 
     def retrieve(
         self,
-        id: object,
+        id: int,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -455,7 +455,7 @@ class AsyncOrgResource(AsyncAPIResource):
 
     async def retrieve(
         self,
-        id: object,
+        id: int,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
