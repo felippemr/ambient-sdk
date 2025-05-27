@@ -10,13 +10,13 @@ import pytest
 from ambient_sdk import AmbientSDK, AsyncAmbientSDK
 from tests.utils import assert_matches_type
 from ambient_sdk.types import (
-    Org,
     OrgCreateResponse,
     OrgUpdateResponse,
     OrgRetrieveBalanceResponse,
     OrgListTransactionsResponse,
     OrgRetrieveBankInfoResponse,
 )
+from ambient_sdk.types.org import Org
 
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
