@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-05-27)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Features
+
+* **api:** update via SDK Studio ([b7e63fa](https://github.com/felippemr/ambient-sdk/commit/b7e63fade019c892a7223b2ab2583f6768f06171))
+* **api:** update via SDK Studio ([d96b413](https://github.com/felippemr/ambient-sdk/commit/d96b413df36ab632481238a62fd14610a06f1746))
+
 ## 0.1.0-alpha.1 (2025-05-22)
 
 Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/felippemr/ambient-sdk/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
