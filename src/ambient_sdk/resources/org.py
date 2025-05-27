@@ -115,7 +115,7 @@ class OrgResource(SyncAPIResource):
 
     def retrieve(
         self,
-        id: int,
+        id: str,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -139,6 +139,8 @@ class OrgResource(SyncAPIResource):
         """
         if not id_type:
             raise ValueError(f"Expected a non-empty value for `id_type` but received {id_type!r}")
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
         return self._get(
             f"/org/{id_type}/{id}",
             options=make_request_options(
@@ -455,7 +457,7 @@ class AsyncOrgResource(AsyncAPIResource):
 
     async def retrieve(
         self,
-        id: int,
+        id: str,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -479,6 +481,8 @@ class AsyncOrgResource(AsyncAPIResource):
         """
         if not id_type:
             raise ValueError(f"Expected a non-empty value for `id_type` but received {id_type!r}")
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
         return await self._get(
             f"/org/{id_type}/{id}",
             options=make_request_options(
