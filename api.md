@@ -109,12 +109,26 @@ from ambient_sdk.types import (
 
 Methods:
 
-- <code title="post /org">client.org.<a href="./src/ambient_sdk/resources/org.py">create</a>(\*\*<a href="src/ambient_sdk/types/org_create_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_create_response.py">OrgCreateResponse</a></code>
-- <code title="get /org/{idType}/{id}">client.org.<a href="./src/ambient_sdk/resources/org.py">retrieve</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org.py">Org</a></code>
-- <code title="post /org/{idType}/{id}">client.org.<a href="./src/ambient_sdk/resources/org.py">update</a>(path_id, \*, id_type, \*\*<a href="src/ambient_sdk/types/org_update_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_update_response.py">OrgUpdateResponse</a></code>
-- <code title="get /org/{idType}/{id}/transaction">client.org.<a href="./src/ambient_sdk/resources/org.py">list_transactions</a>(id, \*, id_type, \*\*<a href="src/ambient_sdk/types/org_list_transactions_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_list_transactions_response.py">OrgListTransactionsResponse</a></code>
-- <code title="get /org/{idType}/{id}/balance">client.org.<a href="./src/ambient_sdk/resources/org.py">retrieve_balance</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org_retrieve_balance_response.py">OrgRetrieveBalanceResponse</a></code>
-- <code title="get /org/{idType}/{id}/bank">client.org.<a href="./src/ambient_sdk/resources/org.py">retrieve_bank_info</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org_retrieve_bank_info_response.py">OrgRetrieveBankInfoResponse</a></code>
+- <code title="post /org">client.org.<a href="./src/ambient_sdk/resources/org/org.py">create</a>(\*\*<a href="src/ambient_sdk/types/org_create_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_create_response.py">OrgCreateResponse</a></code>
+- <code title="get /org/{idType}/{id}">client.org.<a href="./src/ambient_sdk/resources/org/org.py">retrieve</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org/org.py">Org</a></code>
+- <code title="post /org/{idType}/{id}">client.org.<a href="./src/ambient_sdk/resources/org/org.py">update</a>(path_id, \*, id_type, \*\*<a href="src/ambient_sdk/types/org_update_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_update_response.py">OrgUpdateResponse</a></code>
+- <code title="get /org/{idType}/{id}/transaction">client.org.<a href="./src/ambient_sdk/resources/org/org.py">list_transactions</a>(id, \*, id_type, \*\*<a href="src/ambient_sdk/types/org_list_transactions_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org_list_transactions_response.py">OrgListTransactionsResponse</a></code>
+- <code title="get /org/{idType}/{id}/balance">client.org.<a href="./src/ambient_sdk/resources/org/org.py">retrieve_balance</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org_retrieve_balance_response.py">OrgRetrieveBalanceResponse</a></code>
+- <code title="get /org/{idType}/{id}/bank">client.org.<a href="./src/ambient_sdk/resources/org/org.py">retrieve_bank_info</a>(id, \*, id_type) -> <a href="./src/ambient_sdk/types/org_retrieve_bank_info_response.py">OrgRetrieveBankInfoResponse</a></code>
+
+## Employee
+
+### PaymentMethods
+
+Types:
+
+```python
+from ambient_sdk.types.org.employee import PaymentMethodListResponse
+```
+
+Methods:
+
+- <code title="get /org/{idType}/{id}/employee/payment-methods/batch">client.org.employee.payment_methods.<a href="./src/ambient_sdk/resources/org/employee/payment_methods.py">list</a>(id, \*, id_type, \*\*<a href="src/ambient_sdk/types/org/employee/payment_method_list_params.py">params</a>) -> <a href="./src/ambient_sdk/types/org/employee/payment_method_list_response.py">PaymentMethodListResponse</a></code>
 
 # Report
 

@@ -5,7 +5,7 @@ from datetime import datetime
 
 from pydantic import Field as FieldInfo
 
-from .org_core import OrgCore
+from ..org_core import OrgCore
 
 __all__ = ["Org"]
 

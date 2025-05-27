@@ -1,4 +1,4 @@
-configured_endpoints: 32
+configured_endpoints: 33
 openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/test-felippemr%2Fambient-sdk-8834c5a01ac3b06847111760dab332307067c39928848622254a81a7d59f1c89.yml
 openapi_spec_hash: 4421db98537b0e7f63656bdf4a545cb7
-config_hash: 4aaee734662df3f44eb45373a1a30a4a
+config_hash: cf28dc90934467aef6ed8f946ff036cd
