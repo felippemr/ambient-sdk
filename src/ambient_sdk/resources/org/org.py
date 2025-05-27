@@ -4,29 +4,41 @@ from __future__ import annotations
 
 import httpx
 
-from ..types import org_create_params, org_update_params, org_list_transactions_params
-from .._types import NOT_GIVEN, Body, Query, Headers, NotGiven
-from .._utils import maybe_transform, async_maybe_transform
-from .._compat import cached_property
-from .._resource import SyncAPIResource, AsyncAPIResource
-from .._response import (
+from ...types import org_create_params, org_update_params, org_list_transactions_params
+from ..._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from ..._utils import maybe_transform, async_maybe_transform
+from ..._compat import cached_property
+from ..._resource import SyncAPIResource, AsyncAPIResource
+from ..._response import (
     to_raw_response_wrapper,
     to_streamed_response_wrapper,
     async_to_raw_response_wrapper,
     async_to_streamed_response_wrapper,
 )
-from ..types.org import Org
-from .._base_client import make_request_options
-from ..types.org_create_response import OrgCreateResponse
-from ..types.org_update_response import OrgUpdateResponse
-from ..types.org_retrieve_balance_response import OrgRetrieveBalanceResponse
-from ..types.org_list_transactions_response import OrgListTransactionsResponse
-from ..types.org_retrieve_bank_info_response import OrgRetrieveBankInfoResponse
+from ..._base_client import make_request_options
+from ...types.org.org import Org
+from .employee.employee import (
+    EmployeeResource,
+    AsyncEmployeeResource,
+    EmployeeResourceWithRawResponse,
+    AsyncEmployeeResourceWithRawResponse,
+    EmployeeResourceWithStreamingResponse,
+    AsyncEmployeeResourceWithStreamingResponse,
+)
+from ...types.org_create_response import OrgCreateResponse
+from ...types.org_update_response import OrgUpdateResponse
+from ...types.org_retrieve_balance_response import OrgRetrieveBalanceResponse
+from ...types.org_list_transactions_response import OrgListTransactionsResponse
+from ...types.org_retrieve_bank_info_response import OrgRetrieveBankInfoResponse
 
 __all__ = ["OrgResource", "AsyncOrgResource"]
 
 
 class OrgResource(SyncAPIResource):
+    @cached_property
+    def employee(self) -> EmployeeResource:
+        return EmployeeResource(self._client)
+
     @cached_property
     def with_raw_response(self) -> OrgResourceWithRawResponse:
         """
@@ -115,7 +127,7 @@ class OrgResource(SyncAPIResource):
 
     def retrieve(
         self,
-        id: int,
+        id: str,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -139,6 +151,8 @@ class OrgResource(SyncAPIResource):
         """
         if not id_type:
             raise ValueError(f"Expected a non-empty value for `id_type` but received {id_type!r}")
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
         return self._get(
             f"/org/{id_type}/{id}",
             options=make_request_options(
@@ -368,6 +382,10 @@ class OrgResource(SyncAPIResource):
 
 class AsyncOrgResource(AsyncAPIResource):
     @cached_property
+    def employee(self) -> AsyncEmployeeResource:
+        return AsyncEmployeeResource(self._client)
+
+    @cached_property
     def with_raw_response(self) -> AsyncOrgResourceWithRawResponse:
         """
         This property can be used as a prefix for any HTTP method call to return
@@ -455,7 +473,7 @@ class AsyncOrgResource(AsyncAPIResource):
 
     async def retrieve(
         self,
-        id: int,
+        id: str,
         *,
         id_type: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -479,6 +497,8 @@ class AsyncOrgResource(AsyncAPIResource):
         """
         if not id_type:
             raise ValueError(f"Expected a non-empty value for `id_type` but received {id_type!r}")
+        if not id:
+            raise ValueError(f"Expected a non-empty value for `id` but received {id!r}")
         return await self._get(
             f"/org/{id_type}/{id}",
             options=make_request_options(
@@ -729,6 +749,10 @@ class OrgResourceWithRawResponse:
             org.retrieve_bank_info,
         )
 
+    @cached_property
+    def employee(self) -> EmployeeResourceWithRawResponse:
+        return EmployeeResourceWithRawResponse(self._org.employee)
+
 
 class AsyncOrgResourceWithRawResponse:
     def __init__(self, org: AsyncOrgResource) -> None:
@@ -752,6 +776,10 @@ class AsyncOrgResourceWithRawResponse:
         self.retrieve_bank_info = async_to_raw_response_wrapper(
             org.retrieve_bank_info,
         )
+
+    @cached_property
+    def employee(self) -> AsyncEmployeeResourceWithRawResponse:
+        return AsyncEmployeeResourceWithRawResponse(self._org.employee)
 
 
 class OrgResourceWithStreamingResponse:
@@ -777,6 +805,10 @@ class OrgResourceWithStreamingResponse:
             org.retrieve_bank_info,
         )
 
+    @cached_property
+    def employee(self) -> EmployeeResourceWithStreamingResponse:
+        return EmployeeResourceWithStreamingResponse(self._org.employee)
+
 
 class AsyncOrgResourceWithStreamingResponse:
     def __init__(self, org: AsyncOrgResource) -> None:
@@ -800,3 +832,7 @@ class AsyncOrgResourceWithStreamingResponse:
         self.retrieve_bank_info = async_to_streamed_response_wrapper(
             org.retrieve_bank_info,
         )
+
+    @cached_property
+    def employee(self) -> AsyncEmployeeResourceWithStreamingResponse:
+        return AsyncEmployeeResourceWithStreamingResponse(self._org.employee)
