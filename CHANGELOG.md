@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-06-03)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **client:** add follow_redirects request option ([423d841](https://github.com/felippemr/ambient-sdk/commit/423d84195de33483c06dd527e9b1bbecddc201db))
+
+
+### Chores
+
+* **docs:** remove reference to rye shell ([ae8316c](https://github.com/felippemr/ambient-sdk/commit/ae8316cdc8f9b8328f59f20213e2d4c1efaf14cf))
+
 ## 0.1.0-alpha.2 (2025-05-27)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
