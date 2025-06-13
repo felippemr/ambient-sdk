@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2025-06-13)
+
+Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
+
+### Bug Fixes
+
+* **client:** correctly parse binary response | stream ([6262c8d](https://github.com/felippemr/ambient-sdk/commit/6262c8dd74d3ad17eecc6c76e0690ecd23753e90))
+
+
+### Chores
+
+* **tests:** run tests in parallel ([7330626](https://github.com/felippemr/ambient-sdk/commit/73306269414193a7379ac987eaf853053547e0ff))
+
 ## 0.1.0-alpha.3 (2025-06-03)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
