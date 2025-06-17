@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2025-06-17)
+
+Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
+
+### Bug Fixes
+
+* **client:** correctly parse binary response | stream ([6262c8d](https://github.com/felippemr/ambient-sdk/commit/6262c8dd74d3ad17eecc6c76e0690ecd23753e90))
+
+
+### Chores
+
+* **ci:** enable for pull requests ([2c38138](https://github.com/felippemr/ambient-sdk/commit/2c38138a0b6189e83f9d4bed3b8b62feefc16dc2))
+* **internal:** update conftest.py ([47a6d3a](https://github.com/felippemr/ambient-sdk/commit/47a6d3a202bcbdf832c59264786698ec83d54326))
+* **tests:** add tests for httpx client instantiation & proxies ([064fa35](https://github.com/felippemr/ambient-sdk/commit/064fa35859c649d3ce303dbd32dd136434667014))
+* **tests:** run tests in parallel ([7330626](https://github.com/felippemr/ambient-sdk/commit/73306269414193a7379ac987eaf853053547e0ff))
+
 ## 0.1.0-alpha.3 (2025-06-03)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
