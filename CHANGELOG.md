@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.5 (2025-06-18)
+
+Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
+
+### Bug Fixes
+
+* **tests:** fix: tests which call HTTP endpoints directly with the example parameters ([de8a4ab](https://github.com/felippemr/ambient-sdk/commit/de8a4ab1a86782c1d3ae5cb0705b22e24ecff158))
+
+
+### Chores
+
+* **readme:** update badges ([aa8679b](https://github.com/felippemr/ambient-sdk/commit/aa8679b9fbb0086b7d03ee2abcfc22950f310239))
+
 ## 0.1.0-alpha.4 (2025-06-17)
 
 Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
