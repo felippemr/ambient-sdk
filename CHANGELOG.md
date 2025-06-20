@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.6 (2025-06-19)
+
+Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
+
+### Documentation
+
+* **client:** fix httpx.Timeout documentation reference ([ba2a81e](https://github.com/felippemr/ambient-sdk/commit/ba2a81e622029edf841715252e38aa942ed318da))
+
 ## 0.1.0-alpha.5 (2025-06-18)
 
 Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
