@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.7 (2025-06-21)
+
+Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
+
+### Features
+
+* **client:** add support for aiohttp ([bc2e79b](https://github.com/felippemr/ambient-sdk/commit/bc2e79bc36c05d4b2f55114dda85be92f5c4b9dc))
+
 ## 0.1.0-alpha.6 (2025-06-19)
 
 Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
