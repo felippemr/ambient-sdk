@@ -1,6 +1,6 @@
 [project]
 name = "ambient_sdk"
-version = "0.1.0-alpha.6"
+version = "0.1.0-alpha.7"
 description = "The official Python library for the ambient-sdk API"
 dynamic = ["readme"]
 license = "Apache-2.0"
@@ -37,6 +37,8 @@ classifiers = [
 Homepage = "https://github.com/felippemr/ambient-sdk"
 Repository = "https://github.com/felippemr/ambient-sdk"
 
+[project.optional-dependencies]
+aiohttp = ["aiohttp", "httpx_aiohttp>=0.1.6"]
 
 [tool.rye]
 managed = true
