@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.8 (2025-06-30)
+
+Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
+
+### Bug Fixes
+
+* **ci:** correct conditional ([b26c9e9](https://github.com/felippemr/ambient-sdk/commit/b26c9e9f295fd90d2a34ec00d0d53b1291292ce5))
+* **ci:** release-doctor — report correct token name ([54f5078](https://github.com/felippemr/ambient-sdk/commit/54f5078480683657031446033ae3135125a52a4c))
+
+
+### Chores
+
+* **ci:** only run for pushes and fork pull requests ([b7f1468](https://github.com/felippemr/ambient-sdk/commit/b7f1468f5d045d8ff33e3011f267159f757f620f))
+
 ## 0.1.0-alpha.7 (2025-06-24)
 
 Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
