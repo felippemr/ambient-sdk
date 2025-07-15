@@ -77,7 +77,6 @@ pip install --pre ambient_sdk[aiohttp]
 Then you can enable it by instantiating the client with `http_client=DefaultAioHttpClient()`:
 
 ```python
-import os
 import asyncio
 from ambient_sdk import DefaultAioHttpClient
 from ambient_sdk import AsyncAmbientSDK
@@ -85,7 +84,7 @@ from ambient_sdk import AsyncAmbientSDK
 
 async def main() -> None:
     async with AsyncAmbientSDK(
-        api_key=os.environ.get("AMBIENT_SDK_API_KEY"),  # This is the default and can be omitted
+        api_key="My API Key",
         http_client=DefaultAioHttpClient(),
     ) as client:
         authorization = await client.authorization.retrieve()
