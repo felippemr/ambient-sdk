@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.1.0-alpha.8 (2025-07-22)
+
+Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
+
+### Features
+
+* clean up environment call outs ([2086ac7](https://github.com/felippemr/ambient-sdk/commit/2086ac739e360d8223bb44ffd608681e32645790))
+
+
+### Bug Fixes
+
+* **ci:** correct conditional ([b26c9e9](https://github.com/felippemr/ambient-sdk/commit/b26c9e9f295fd90d2a34ec00d0d53b1291292ce5))
+* **ci:** release-doctor — report correct token name ([54f5078](https://github.com/felippemr/ambient-sdk/commit/54f5078480683657031446033ae3135125a52a4c))
+* **client:** don't send Content-Type header on GET requests ([df85fcc](https://github.com/felippemr/ambient-sdk/commit/df85fcc56f084779639db80e588b8883c8a1426a))
+* **parsing:** correctly handle nested discriminated unions ([8a57059](https://github.com/felippemr/ambient-sdk/commit/8a570596ff30b5f24bf4a95bade6ad1aba1f38a8))
+* **parsing:** ignore empty metadata ([77ac3fe](https://github.com/felippemr/ambient-sdk/commit/77ac3fe8607ce71a7b884e44183ee84856d897f4))
+
+
+### Chores
+
+* **ci:** change upload type ([0d3c998](https://github.com/felippemr/ambient-sdk/commit/0d3c9980ff9f140c9ccfcfb7c058a5d745f4a356))
+* **ci:** only run for pushes and fork pull requests ([b7f1468](https://github.com/felippemr/ambient-sdk/commit/b7f1468f5d045d8ff33e3011f267159f757f620f))
+* **internal:** bump pinned h11 dep ([5b8f522](https://github.com/felippemr/ambient-sdk/commit/5b8f522241042547ad87acd035505412c3f403ad))
+* **internal:** codegen related update ([0c48508](https://github.com/felippemr/ambient-sdk/commit/0c485084cc798b8e3a0db405fd4dac0021a5a894))
+* **package:** mark python 3.13 as supported ([1672838](https://github.com/felippemr/ambient-sdk/commit/167283850a727cba776c88d23483ae6c61ef3ae6))
+* **readme:** fix version rendering on pypi ([bfa7e82](https://github.com/felippemr/ambient-sdk/commit/bfa7e82a17a612026ea5fdf9a0653775ce878aa9))
+
 ## 0.1.0-alpha.7 (2025-06-24)
 
 Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
