@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.9 (2025-07-23)
+
+Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
+
+### Bug Fixes
+
+* **parsing:** parse extra field types ([b153bfb](https://github.com/felippemr/ambient-sdk/commit/b153bfbf64238729686396fdc2cb0cfc7489c99e))
+
 ## 0.1.0-alpha.8 (2025-07-22)
 
 Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
