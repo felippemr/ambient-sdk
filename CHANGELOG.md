@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.10 (2025-07-25)
+
+Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
+
+### Chores
+
+* **project:** add settings file for vscode ([e92260e](https://github.com/felippemr/ambient-sdk/commit/e92260e90145161509d30b94c7236ff4db7315cd))
+
 ## 0.1.0-alpha.9 (2025-07-23)
 
 Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
