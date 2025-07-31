@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.10 (2025-07-31)
+
+Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
+
+### Features
+
+* **client:** support file upload requests ([5dd50ba](https://github.com/felippemr/ambient-sdk/commit/5dd50ba3a6897f2fd1cb278250597e99c277d623))
+
+
+### Chores
+
+* **project:** add settings file for vscode ([e92260e](https://github.com/felippemr/ambient-sdk/commit/e92260e90145161509d30b94c7236ff4db7315cd))
+
 ## 0.1.0-alpha.9 (2025-07-23)
 
 Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
