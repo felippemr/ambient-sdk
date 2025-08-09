@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.10 (2025-08-09)
+
+Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
+
+### Features
+
+* **client:** support file upload requests ([5dd50ba](https://github.com/felippemr/ambient-sdk/commit/5dd50ba3a6897f2fd1cb278250597e99c277d623))
+
+
+### Chores
+
+* **internal:** fix ruff target version ([9aeca74](https://github.com/felippemr/ambient-sdk/commit/9aeca74409f2d0daa2ab5479656ab9c838a08203))
+* **project:** add settings file for vscode ([e92260e](https://github.com/felippemr/ambient-sdk/commit/e92260e90145161509d30b94c7236ff4db7315cd))
+* update @stainless-api/prism-cli to v5.15.0 ([b56ba21](https://github.com/felippemr/ambient-sdk/commit/b56ba21d8deb8caf5448638ee332b8aea1bd63a2))
+
 ## 0.1.0-alpha.9 (2025-07-23)
 
 Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
