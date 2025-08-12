@@ -21,7 +21,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestTransaction:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve(self, client: AmbientSDK) -> None:
         transaction = client.transaction.retrieve(
@@ -29,7 +29,7 @@ class TestTransaction:
         )
         assert_matches_type(TransactionRetrieveResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve(self, client: AmbientSDK) -> None:
         response = client.transaction.with_raw_response.retrieve(
@@ -41,7 +41,7 @@ class TestTransaction:
         transaction = response.parse()
         assert_matches_type(TransactionRetrieveResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve(self, client: AmbientSDK) -> None:
         with client.transaction.with_streaming_response.retrieve(
@@ -55,7 +55,7 @@ class TestTransaction:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_retrieve(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id` but received ''"):
@@ -63,7 +63,7 @@ class TestTransaction:
                 "",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_batch_queue(self, client: AmbientSDK) -> None:
         transaction = client.transaction.batch_queue(
@@ -71,7 +71,7 @@ class TestTransaction:
         )
         assert_matches_type(TransactionBatchQueueResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_batch_queue(self, client: AmbientSDK) -> None:
         response = client.transaction.with_raw_response.batch_queue(
@@ -83,7 +83,7 @@ class TestTransaction:
         transaction = response.parse()
         assert_matches_type(TransactionBatchQueueResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_batch_queue(self, client: AmbientSDK) -> None:
         with client.transaction.with_streaming_response.batch_queue(
@@ -97,13 +97,13 @@ class TestTransaction:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_queue(self, client: AmbientSDK) -> None:
         transaction = client.transaction.queue()
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_queue_with_all_params(self, client: AmbientSDK) -> None:
         transaction = client.transaction.queue(
@@ -114,7 +114,7 @@ class TestTransaction:
         )
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_queue(self, client: AmbientSDK) -> None:
         response = client.transaction.with_raw_response.queue()
@@ -124,7 +124,7 @@ class TestTransaction:
         transaction = response.parse()
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_queue(self, client: AmbientSDK) -> None:
         with client.transaction.with_streaming_response.queue() as response:
@@ -142,7 +142,7 @@ class TestAsyncTransaction:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         transaction = await async_client.transaction.retrieve(
@@ -150,7 +150,7 @@ class TestAsyncTransaction:
         )
         assert_matches_type(TransactionRetrieveResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.transaction.with_raw_response.retrieve(
@@ -162,7 +162,7 @@ class TestAsyncTransaction:
         transaction = await response.parse()
         assert_matches_type(TransactionRetrieveResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.transaction.with_streaming_response.retrieve(
@@ -176,7 +176,7 @@ class TestAsyncTransaction:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id` but received ''"):
@@ -184,7 +184,7 @@ class TestAsyncTransaction:
                 "",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_batch_queue(self, async_client: AsyncAmbientSDK) -> None:
         transaction = await async_client.transaction.batch_queue(
@@ -192,7 +192,7 @@ class TestAsyncTransaction:
         )
         assert_matches_type(TransactionBatchQueueResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_batch_queue(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.transaction.with_raw_response.batch_queue(
@@ -204,7 +204,7 @@ class TestAsyncTransaction:
         transaction = await response.parse()
         assert_matches_type(TransactionBatchQueueResponse, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_batch_queue(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.transaction.with_streaming_response.batch_queue(
@@ -218,13 +218,13 @@ class TestAsyncTransaction:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_queue(self, async_client: AsyncAmbientSDK) -> None:
         transaction = await async_client.transaction.queue()
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_queue_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         transaction = await async_client.transaction.queue(
@@ -235,7 +235,7 @@ class TestAsyncTransaction:
         )
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_queue(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.transaction.with_raw_response.queue()
@@ -245,7 +245,7 @@ class TestAsyncTransaction:
         transaction = await response.parse()
         assert_matches_type(QueueTransaction, transaction, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_queue(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.transaction.with_streaming_response.queue() as response:

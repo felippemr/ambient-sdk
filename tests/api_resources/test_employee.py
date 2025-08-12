@@ -27,7 +27,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestEmployee:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create(self, client: AmbientSDK) -> None:
         employee = client.employee.create(
@@ -47,7 +47,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create_with_all_params(self, client: AmbientSDK) -> None:
         employee = client.employee.create(
@@ -68,7 +68,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_create(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.create(
@@ -92,7 +92,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_create(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.create(
@@ -118,7 +118,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve(self, client: AmbientSDK) -> None:
         employee = client.employee.retrieve(
@@ -127,7 +127,7 @@ class TestEmployee:
         )
         assert_matches_type(Employee, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.retrieve(
@@ -140,7 +140,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(Employee, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.retrieve(
@@ -155,7 +155,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_retrieve(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -170,7 +170,7 @@ class TestEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_update(self, client: AmbientSDK) -> None:
         employee = client.employee.update(
@@ -179,7 +179,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_update_with_all_params(self, client: AmbientSDK) -> None:
         employee = client.employee.update(
@@ -206,7 +206,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_update(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.update(
@@ -219,7 +219,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_update(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.update(
@@ -234,7 +234,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_update(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -249,7 +249,7 @@ class TestEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_archive(self, client: AmbientSDK) -> None:
         employee = client.employee.archive(
@@ -258,7 +258,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_archive_with_all_params(self, client: AmbientSDK) -> None:
         employee = client.employee.archive(
@@ -270,7 +270,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_archive(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.archive(
@@ -283,7 +283,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_archive(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.archive(
@@ -298,7 +298,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_archive(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -313,7 +313,7 @@ class TestEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_batch_create(self, client: AmbientSDK) -> None:
         employee = client.employee.batch_create(
@@ -352,7 +352,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeBatchCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_batch_create(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.batch_create(
@@ -395,7 +395,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeBatchCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_batch_create(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.batch_create(
@@ -440,7 +440,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_get_payment_methods(self, client: AmbientSDK) -> None:
         employee = client.employee.get_payment_methods(
@@ -449,7 +449,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeGetPaymentMethodsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_get_payment_methods(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.get_payment_methods(
@@ -462,7 +462,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeGetPaymentMethodsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_get_payment_methods(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.get_payment_methods(
@@ -477,7 +477,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_get_payment_methods(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -492,7 +492,7 @@ class TestEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_get_transactions(self, client: AmbientSDK) -> None:
         employee = client.employee.get_transactions(
@@ -503,7 +503,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeGetTransactionsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_get_transactions(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.get_transactions(
@@ -518,7 +518,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeGetTransactionsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_get_transactions(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.get_transactions(
@@ -535,7 +535,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_get_transactions(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -554,7 +554,7 @@ class TestEmployee:
                 start_date="startDate",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_unarchive(self, client: AmbientSDK) -> None:
         employee = client.employee.unarchive(
@@ -563,7 +563,7 @@ class TestEmployee:
         )
         assert_matches_type(EmployeeUnarchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_unarchive(self, client: AmbientSDK) -> None:
         response = client.employee.with_raw_response.unarchive(
@@ -576,7 +576,7 @@ class TestEmployee:
         employee = response.parse()
         assert_matches_type(EmployeeUnarchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_unarchive(self, client: AmbientSDK) -> None:
         with client.employee.with_streaming_response.unarchive(
@@ -591,7 +591,7 @@ class TestEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_unarchive(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -612,7 +612,7 @@ class TestAsyncEmployee:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.create(
@@ -632,7 +632,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.create(
@@ -653,7 +653,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.create(
@@ -677,7 +677,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.create(
@@ -703,7 +703,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.retrieve(
@@ -712,7 +712,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(Employee, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.retrieve(
@@ -725,7 +725,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(Employee, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.retrieve(
@@ -740,7 +740,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -755,7 +755,7 @@ class TestAsyncEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_update(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.update(
@@ -764,7 +764,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_update_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.update(
@@ -791,7 +791,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_update(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.update(
@@ -804,7 +804,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeUpdateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_update(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.update(
@@ -819,7 +819,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_update(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -834,7 +834,7 @@ class TestAsyncEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_archive(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.archive(
@@ -843,7 +843,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_archive_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.archive(
@@ -855,7 +855,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_archive(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.archive(
@@ -868,7 +868,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeArchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_archive(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.archive(
@@ -883,7 +883,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_archive(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -898,7 +898,7 @@ class TestAsyncEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_batch_create(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.batch_create(
@@ -937,7 +937,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeBatchCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_batch_create(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.batch_create(
@@ -980,7 +980,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeBatchCreateResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_batch_create(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.batch_create(
@@ -1025,7 +1025,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_get_payment_methods(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.get_payment_methods(
@@ -1034,7 +1034,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeGetPaymentMethodsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_get_payment_methods(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.get_payment_methods(
@@ -1047,7 +1047,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeGetPaymentMethodsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_get_payment_methods(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.get_payment_methods(
@@ -1062,7 +1062,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_get_payment_methods(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -1077,7 +1077,7 @@ class TestAsyncEmployee:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_get_transactions(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.get_transactions(
@@ -1088,7 +1088,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeGetTransactionsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_get_transactions(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.get_transactions(
@@ -1103,7 +1103,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeGetTransactionsResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_get_transactions(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.get_transactions(
@@ -1120,7 +1120,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_get_transactions(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -1139,7 +1139,7 @@ class TestAsyncEmployee:
                 start_date="startDate",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_unarchive(self, async_client: AsyncAmbientSDK) -> None:
         employee = await async_client.employee.unarchive(
@@ -1148,7 +1148,7 @@ class TestAsyncEmployee:
         )
         assert_matches_type(EmployeeUnarchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_unarchive(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.with_raw_response.unarchive(
@@ -1161,7 +1161,7 @@ class TestAsyncEmployee:
         employee = await response.parse()
         assert_matches_type(EmployeeUnarchiveResponse, employee, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_unarchive(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.with_streaming_response.unarchive(
@@ -1176,7 +1176,7 @@ class TestAsyncEmployee:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_unarchive(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
