@@ -22,13 +22,13 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestReport:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_archived_accounts_report(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_archived_accounts_report()
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_archived_accounts_report_with_all_params(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_archived_accounts_report(
@@ -38,7 +38,7 @@ class TestReport:
         )
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve_archived_accounts_report(self, client: AmbientSDK) -> None:
         response = client.report.with_raw_response.retrieve_archived_accounts_report()
@@ -48,7 +48,7 @@ class TestReport:
         report = response.parse()
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve_archived_accounts_report(self, client: AmbientSDK) -> None:
         with client.report.with_streaming_response.retrieve_archived_accounts_report() as response:
@@ -60,13 +60,13 @@ class TestReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_funding_transfer_detail_report(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_funding_transfer_detail_report()
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_funding_transfer_detail_report_with_all_params(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_funding_transfer_detail_report(
@@ -76,7 +76,7 @@ class TestReport:
         )
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve_funding_transfer_detail_report(self, client: AmbientSDK) -> None:
         response = client.report.with_raw_response.retrieve_funding_transfer_detail_report()
@@ -86,7 +86,7 @@ class TestReport:
         report = response.parse()
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve_funding_transfer_detail_report(self, client: AmbientSDK) -> None:
         with client.report.with_streaming_response.retrieve_funding_transfer_detail_report() as response:
@@ -98,13 +98,13 @@ class TestReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_nonzero_balance_accounts_report(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_nonzero_balance_accounts_report()
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_nonzero_balance_accounts_report_with_all_params(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_nonzero_balance_accounts_report(
@@ -112,7 +112,7 @@ class TestReport:
         )
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve_nonzero_balance_accounts_report(self, client: AmbientSDK) -> None:
         response = client.report.with_raw_response.retrieve_nonzero_balance_accounts_report()
@@ -122,7 +122,7 @@ class TestReport:
         report = response.parse()
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve_nonzero_balance_accounts_report(self, client: AmbientSDK) -> None:
         with client.report.with_streaming_response.retrieve_nonzero_balance_accounts_report() as response:
@@ -134,13 +134,13 @@ class TestReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_payments_report(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_payments_report()
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_payments_report_with_all_params(self, client: AmbientSDK) -> None:
         report = client.report.retrieve_payments_report(
@@ -151,7 +151,7 @@ class TestReport:
         )
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve_payments_report(self, client: AmbientSDK) -> None:
         response = client.report.with_raw_response.retrieve_payments_report()
@@ -161,7 +161,7 @@ class TestReport:
         report = response.parse()
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve_payments_report(self, client: AmbientSDK) -> None:
         with client.report.with_streaming_response.retrieve_payments_report() as response:
@@ -179,13 +179,13 @@ class TestAsyncReport:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_archived_accounts_report(self, async_client: AsyncAmbientSDK) -> None:
         report = await async_client.report.retrieve_archived_accounts_report()
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_archived_accounts_report_with_all_params(
         self, async_client: AsyncAmbientSDK
@@ -197,7 +197,7 @@ class TestAsyncReport:
         )
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve_archived_accounts_report(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.report.with_raw_response.retrieve_archived_accounts_report()
@@ -207,7 +207,7 @@ class TestAsyncReport:
         report = await response.parse()
         assert_matches_type(ReportRetrieveArchivedAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve_archived_accounts_report(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.report.with_streaming_response.retrieve_archived_accounts_report() as response:
@@ -219,13 +219,13 @@ class TestAsyncReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_funding_transfer_detail_report(self, async_client: AsyncAmbientSDK) -> None:
         report = await async_client.report.retrieve_funding_transfer_detail_report()
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_funding_transfer_detail_report_with_all_params(
         self, async_client: AsyncAmbientSDK
@@ -237,7 +237,7 @@ class TestAsyncReport:
         )
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve_funding_transfer_detail_report(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.report.with_raw_response.retrieve_funding_transfer_detail_report()
@@ -247,7 +247,7 @@ class TestAsyncReport:
         report = await response.parse()
         assert_matches_type(ReportRetrieveFundingTransferDetailReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve_funding_transfer_detail_report(
         self, async_client: AsyncAmbientSDK
@@ -261,13 +261,13 @@ class TestAsyncReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_nonzero_balance_accounts_report(self, async_client: AsyncAmbientSDK) -> None:
         report = await async_client.report.retrieve_nonzero_balance_accounts_report()
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_nonzero_balance_accounts_report_with_all_params(
         self, async_client: AsyncAmbientSDK
@@ -277,7 +277,7 @@ class TestAsyncReport:
         )
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve_nonzero_balance_accounts_report(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.report.with_raw_response.retrieve_nonzero_balance_accounts_report()
@@ -287,7 +287,7 @@ class TestAsyncReport:
         report = await response.parse()
         assert_matches_type(ReportRetrieveNonzeroBalanceAccountsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve_nonzero_balance_accounts_report(
         self, async_client: AsyncAmbientSDK
@@ -301,13 +301,13 @@ class TestAsyncReport:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_payments_report(self, async_client: AsyncAmbientSDK) -> None:
         report = await async_client.report.retrieve_payments_report()
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_payments_report_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         report = await async_client.report.retrieve_payments_report(
@@ -318,7 +318,7 @@ class TestAsyncReport:
         )
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve_payments_report(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.report.with_raw_response.retrieve_payments_report()
@@ -328,7 +328,7 @@ class TestAsyncReport:
         report = await response.parse()
         assert_matches_type(ReportRetrievePaymentsReportResponse, report, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve_payments_report(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.report.with_streaming_response.retrieve_payments_report() as response:
