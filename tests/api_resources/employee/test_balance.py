@@ -17,7 +17,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestBalance:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve(self, client: AmbientSDK) -> None:
         balance = client.employee.balance.retrieve(
@@ -26,7 +26,7 @@ class TestBalance:
         )
         assert_matches_type(BalanceRetrieveResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve(self, client: AmbientSDK) -> None:
         response = client.employee.balance.with_raw_response.retrieve(
@@ -39,7 +39,7 @@ class TestBalance:
         balance = response.parse()
         assert_matches_type(BalanceRetrieveResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve(self, client: AmbientSDK) -> None:
         with client.employee.balance.with_streaming_response.retrieve(
@@ -54,7 +54,7 @@ class TestBalance:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_retrieve(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -69,7 +69,7 @@ class TestBalance:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_update(self, client: AmbientSDK) -> None:
         balance = client.employee.balance.update(
@@ -78,7 +78,7 @@ class TestBalance:
         )
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_update_with_all_params(self, client: AmbientSDK) -> None:
         balance = client.employee.balance.update(
@@ -89,7 +89,7 @@ class TestBalance:
         )
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_update(self, client: AmbientSDK) -> None:
         response = client.employee.balance.with_raw_response.update(
@@ -102,7 +102,7 @@ class TestBalance:
         balance = response.parse()
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_update(self, client: AmbientSDK) -> None:
         with client.employee.balance.with_streaming_response.update(
@@ -117,7 +117,7 @@ class TestBalance:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_path_params_update(self, client: AmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -138,7 +138,7 @@ class TestAsyncBalance:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         balance = await async_client.employee.balance.retrieve(
@@ -147,7 +147,7 @@ class TestAsyncBalance:
         )
         assert_matches_type(BalanceRetrieveResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.balance.with_raw_response.retrieve(
@@ -160,7 +160,7 @@ class TestAsyncBalance:
         balance = await response.parse()
         assert_matches_type(BalanceRetrieveResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.balance.with_streaming_response.retrieve(
@@ -175,7 +175,7 @@ class TestAsyncBalance:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_retrieve(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):
@@ -190,7 +190,7 @@ class TestAsyncBalance:
                 id_type="idType",
             )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_update(self, async_client: AsyncAmbientSDK) -> None:
         balance = await async_client.employee.balance.update(
@@ -199,7 +199,7 @@ class TestAsyncBalance:
         )
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_update_with_all_params(self, async_client: AsyncAmbientSDK) -> None:
         balance = await async_client.employee.balance.update(
@@ -210,7 +210,7 @@ class TestAsyncBalance:
         )
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_update(self, async_client: AsyncAmbientSDK) -> None:
         response = await async_client.employee.balance.with_raw_response.update(
@@ -223,7 +223,7 @@ class TestAsyncBalance:
         balance = await response.parse()
         assert_matches_type(BalanceUpdateResponse, balance, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_update(self, async_client: AsyncAmbientSDK) -> None:
         async with async_client.employee.balance.with_streaming_response.update(
@@ -238,7 +238,7 @@ class TestAsyncBalance:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_path_params_update(self, async_client: AsyncAmbientSDK) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `id_type` but received ''"):

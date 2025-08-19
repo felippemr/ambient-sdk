@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-08-15)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Chores
+
+* **internal:** codegen related update ([921d926](https://github.com/felippemr/ambient-sdk/commit/921d9266c7114b4bd07af99ead1159936764fc02))
+* **internal:** update comment in script ([9229093](https://github.com/felippemr/ambient-sdk/commit/92290931fb8e4993dbba9142a8b03b9c16a562f5))
+
 ## 0.1.0-alpha.10 (2025-08-09)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
