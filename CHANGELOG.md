@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.12 (2025-08-27)
+
+Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
+
+### Bug Fixes
+
+* avoid newer type syntax ([ce49764](https://github.com/felippemr/ambient-sdk/commit/ce4976450c12a04b214b8a579314a7d986a59600))
+
+
+### Chores
+
+* **internal:** change ci workflow machines ([2bedb77](https://github.com/felippemr/ambient-sdk/commit/2bedb776a069043f9fe990038206f35dfbfa8145))
+* **internal:** update pyright exclude list ([e7cbb27](https://github.com/felippemr/ambient-sdk/commit/e7cbb27d244eb02a3b6770f1a088e357e3609731))
+* update github action ([e6a4b95](https://github.com/felippemr/ambient-sdk/commit/e6a4b953866031b0e34971bdb6761d5756560e99))
+
 ## 0.1.0-alpha.11 (2025-08-15)
 
 Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
