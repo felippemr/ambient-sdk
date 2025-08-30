@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2025-08-30)
+
+Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
+
+### Chores
+
+* **internal:** add Sequence related utils ([2f24c92](https://github.com/felippemr/ambient-sdk/commit/2f24c929408989e52c329c6c529614161d1b536f))
+
 ## 0.1.0-alpha.12 (2025-08-27)
 
 Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
