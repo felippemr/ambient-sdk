@@ -11,7 +11,7 @@ from ..types import (
     employer_update_params,
     employer_list_transactions_params,
 )
-from .._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from .._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
 from .._utils import maybe_transform, async_maybe_transform
 from .._compat import cached_property
 from .._resource import SyncAPIResource, AsyncAPIResource
@@ -65,13 +65,13 @@ class EmployerResource(SyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        street_address2: str | NotGiven = NOT_GIVEN,
+        street_address2: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerCreateResponse:
         """
         Creates new employer with given information, queing banking data creation.
@@ -136,7 +136,7 @@ class EmployerResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveResponse:
         """
         Retrieve employer information based on the specified ID type and ID.
@@ -167,24 +167,24 @@ class EmployerResource(SyncAPIResource):
         id: str,
         *,
         id_type: str,
-        city: str | NotGiven = NOT_GIVEN,
-        dba: str | NotGiven = NOT_GIVEN,
-        ein: str | NotGiven = NOT_GIVEN,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        name: str | NotGiven = NOT_GIVEN,
-        org_id: int | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        city: str | Omit = omit,
+        dba: str | Omit = omit,
+        ein: str | Omit = omit,
+        employer_id: str | Omit = omit,
+        name: str | Omit = omit,
+        org_id: int | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        state: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        street_address2: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerUpdateResponse:
         """
         Update employer information based on the specified ID type and ID.
@@ -261,7 +261,7 @@ class EmployerResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerCreateBatchResponse:
         """
         Submits employer basic information in a list.
@@ -296,7 +296,7 @@ class EmployerResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerListTransactionsResponse:
         """
         Retrieve the list of transactions for an employer based on the specified ID type
@@ -349,7 +349,7 @@ class EmployerResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveBalanceResponse:
         """
         Retrieve the balance information of an employer based on the specified ID type
@@ -386,7 +386,7 @@ class EmployerResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveBankInfoResponse:
         """
         Retrieve the bank information of an employer based on the specified ID type and
@@ -445,13 +445,13 @@ class AsyncEmployerResource(AsyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        street_address2: str | NotGiven = NOT_GIVEN,
+        street_address2: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerCreateResponse:
         """
         Creates new employer with given information, queing banking data creation.
@@ -516,7 +516,7 @@ class AsyncEmployerResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveResponse:
         """
         Retrieve employer information based on the specified ID type and ID.
@@ -547,24 +547,24 @@ class AsyncEmployerResource(AsyncAPIResource):
         id: str,
         *,
         id_type: str,
-        city: str | NotGiven = NOT_GIVEN,
-        dba: str | NotGiven = NOT_GIVEN,
-        ein: str | NotGiven = NOT_GIVEN,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        name: str | NotGiven = NOT_GIVEN,
-        org_id: int | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        city: str | Omit = omit,
+        dba: str | Omit = omit,
+        ein: str | Omit = omit,
+        employer_id: str | Omit = omit,
+        name: str | Omit = omit,
+        org_id: int | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        state: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        street_address2: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerUpdateResponse:
         """
         Update employer information based on the specified ID type and ID.
@@ -641,7 +641,7 @@ class AsyncEmployerResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerCreateBatchResponse:
         """
         Submits employer basic information in a list.
@@ -676,7 +676,7 @@ class AsyncEmployerResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerListTransactionsResponse:
         """
         Retrieve the list of transactions for an employer based on the specified ID type
@@ -729,7 +729,7 @@ class AsyncEmployerResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveBalanceResponse:
         """
         Retrieve the balance information of an employer based on the specified ID type
@@ -766,7 +766,7 @@ class AsyncEmployerResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployerRetrieveBankInfoResponse:
         """
         Retrieve the bank information of an employer based on the specified ID type and

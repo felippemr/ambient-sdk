@@ -5,7 +5,7 @@ from __future__ import annotations
 import httpx
 
 from ...types import org_create_params, org_update_params, org_list_transactions_params
-from ..._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from ..._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
 from ..._utils import maybe_transform, async_maybe_transform
 from ..._compat import cached_property
 from ..._resource import SyncAPIResource, AsyncAPIResource
@@ -67,14 +67,14 @@ class OrgResource(SyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        parent: int | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
+        parent: int | Omit = omit,
+        street_address2: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgCreateResponse:
         """
         Creates new organization with given information, queing banking data creation.
@@ -135,7 +135,7 @@ class OrgResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> Org:
         """
         Retrieve organization information based on the specified ID type and ID.
@@ -166,22 +166,22 @@ class OrgResource(SyncAPIResource):
         path_id: str,
         *,
         id_type: str,
-        body_id: int | NotGiven = NOT_GIVEN,
-        city: str | NotGiven = NOT_GIVEN,
-        ein: str | NotGiven = NOT_GIVEN,
-        name: str | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        body_id: int | Omit = omit,
+        city: str | Omit = omit,
+        ein: str | Omit = omit,
+        name: str | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        state: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        street_address2: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgUpdateResponse:
         """
         Update organization information based on the specified ID type and ID.
@@ -249,14 +249,14 @@ class OrgResource(SyncAPIResource):
         id_type: str,
         end_date: str,
         start_date: str,
-        limit: int | NotGiven = NOT_GIVEN,
-        offset: int | NotGiven = NOT_GIVEN,
+        limit: int | Omit = omit,
+        offset: int | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgListTransactionsResponse:
         """
         Retrieve the list of transactions for an organization based on the specified ID
@@ -315,7 +315,7 @@ class OrgResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgRetrieveBalanceResponse:
         """
         Retrieve the balance information of an organization based on the specified ID
@@ -352,7 +352,7 @@ class OrgResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgRetrieveBankInfoResponse:
         """
         Retrieve the bank information of an organization based on the specified ID type
@@ -413,14 +413,14 @@ class AsyncOrgResource(AsyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        parent: int | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
+        parent: int | Omit = omit,
+        street_address2: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgCreateResponse:
         """
         Creates new organization with given information, queing banking data creation.
@@ -481,7 +481,7 @@ class AsyncOrgResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> Org:
         """
         Retrieve organization information based on the specified ID type and ID.
@@ -512,22 +512,22 @@ class AsyncOrgResource(AsyncAPIResource):
         path_id: str,
         *,
         id_type: str,
-        body_id: int | NotGiven = NOT_GIVEN,
-        city: str | NotGiven = NOT_GIVEN,
-        ein: str | NotGiven = NOT_GIVEN,
-        name: str | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        street_address2: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        body_id: int | Omit = omit,
+        city: str | Omit = omit,
+        ein: str | Omit = omit,
+        name: str | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        state: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        street_address2: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgUpdateResponse:
         """
         Update organization information based on the specified ID type and ID.
@@ -595,14 +595,14 @@ class AsyncOrgResource(AsyncAPIResource):
         id_type: str,
         end_date: str,
         start_date: str,
-        limit: int | NotGiven = NOT_GIVEN,
-        offset: int | NotGiven = NOT_GIVEN,
+        limit: int | Omit = omit,
+        offset: int | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgListTransactionsResponse:
         """
         Retrieve the list of transactions for an organization based on the specified ID
@@ -661,7 +661,7 @@ class AsyncOrgResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgRetrieveBalanceResponse:
         """
         Retrieve the balance information of an organization based on the specified ID
@@ -698,7 +698,7 @@ class AsyncOrgResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> OrgRetrieveBankInfoResponse:
         """
         Retrieve the bank information of an organization based on the specified ID type
