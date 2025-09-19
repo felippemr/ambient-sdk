@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import httpx
 
-from ..._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from ..._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
 from ..._utils import maybe_transform, async_maybe_transform
 from ..._compat import cached_property
 from ..._resource import SyncAPIResource, AsyncAPIResource
@@ -52,7 +52,7 @@ class BalanceResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> BalanceRetrieveResponse:
         """
         Retrieve the balance information of an employee based on the specified ID type
@@ -84,14 +84,14 @@ class BalanceResource(SyncAPIResource):
         id: str,
         *,
         id_type: str,
-        admin_memo: str | NotGiven = NOT_GIVEN,
-        desired_amount: float | NotGiven = NOT_GIVEN,
+        admin_memo: str | Omit = omit,
+        desired_amount: float | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> BalanceUpdateResponse:
         """
         Queue a transaction that adjusts the balance of an employee based on the
@@ -160,7 +160,7 @@ class AsyncBalanceResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> BalanceRetrieveResponse:
         """
         Retrieve the balance information of an employee based on the specified ID type
@@ -192,14 +192,14 @@ class AsyncBalanceResource(AsyncAPIResource):
         id: str,
         *,
         id_type: str,
-        admin_memo: str | NotGiven = NOT_GIVEN,
-        desired_amount: float | NotGiven = NOT_GIVEN,
+        admin_memo: str | Omit = omit,
+        desired_amount: float | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> BalanceUpdateResponse:
         """
         Queue a transaction that adjusts the balance of an employee based on the

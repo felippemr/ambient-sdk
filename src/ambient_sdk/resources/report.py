@@ -10,7 +10,7 @@ from ..types import (
     report_retrieve_funding_transfer_detail_report_params,
     report_retrieve_nonzero_balance_accounts_report_params,
 )
-from .._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from .._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
 from .._utils import maybe_transform, async_maybe_transform
 from .._compat import cached_property
 from .._resource import SyncAPIResource, AsyncAPIResource
@@ -56,15 +56,15 @@ class ReportResource(SyncAPIResource):
     def retrieve_archived_accounts_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveArchivedAccountsReportResponse:
         """
         Retrieve a report of archived accounts, including optional filters for a list of
@@ -107,15 +107,15 @@ class ReportResource(SyncAPIResource):
     def retrieve_funding_transfer_detail_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveFundingTransferDetailReportResponse:
         """
         Retrieve a report of funding transfers, including optional filters for a list of
@@ -158,13 +158,13 @@ class ReportResource(SyncAPIResource):
     def retrieve_nonzero_balance_accounts_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveNonzeroBalanceAccountsReportResponse:
         """
         Retrieve a report of accounts that have a non-zero balance, including optional
@@ -200,16 +200,16 @@ class ReportResource(SyncAPIResource):
     def retrieve_payments_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
-        type_text: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
+        type_text: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrievePaymentsReportResponse:
         """
         Retrieve a report of payment transactions, including optional filters for date
@@ -276,15 +276,15 @@ class AsyncReportResource(AsyncAPIResource):
     async def retrieve_archived_accounts_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveArchivedAccountsReportResponse:
         """
         Retrieve a report of archived accounts, including optional filters for a list of
@@ -327,15 +327,15 @@ class AsyncReportResource(AsyncAPIResource):
     async def retrieve_funding_transfer_detail_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveFundingTransferDetailReportResponse:
         """
         Retrieve a report of funding transfers, including optional filters for a list of
@@ -378,13 +378,13 @@ class AsyncReportResource(AsyncAPIResource):
     async def retrieve_nonzero_balance_accounts_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrieveNonzeroBalanceAccountsReportResponse:
         """
         Retrieve a report of accounts that have a non-zero balance, including optional
@@ -420,16 +420,16 @@ class AsyncReportResource(AsyncAPIResource):
     async def retrieve_payments_report(
         self,
         *,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        end_date: str | NotGiven = NOT_GIVEN,
-        start_date: str | NotGiven = NOT_GIVEN,
-        type_text: str | NotGiven = NOT_GIVEN,
+        employer_id: str | Omit = omit,
+        end_date: str | Omit = omit,
+        start_date: str | Omit = omit,
+        type_text: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> ReportRetrievePaymentsReportResponse:
         """
         Retrieve a report of payment transactions, including optional filters for date

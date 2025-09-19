@@ -21,7 +21,7 @@ from .balance import (
     BalanceResourceWithStreamingResponse,
     AsyncBalanceResourceWithStreamingResponse,
 )
-from ..._types import NOT_GIVEN, Body, Query, Headers, NotGiven
+from ..._types import Body, Omit, Query, Headers, NotGiven, omit, not_given
 from ..._utils import maybe_transform, async_maybe_transform
 from ..._compat import cached_property
 from ..._resource import SyncAPIResource, AsyncAPIResource
@@ -85,13 +85,13 @@ class EmployeeResource(SyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        middle_name: str | NotGiven = NOT_GIVEN,
+        middle_name: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeCreateResponse:
         """
         Submits employee basic information and returns the complete employee record.
@@ -172,7 +172,7 @@ class EmployeeResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> Employee:
         """
         Retrieve employee information based on the specified ID type and ID.
@@ -204,30 +204,30 @@ class EmployeeResource(SyncAPIResource):
         id: str,
         *,
         id_type: str,
-        city: str | NotGiven = NOT_GIVEN,
-        debit_id: str | NotGiven = NOT_GIVEN,
-        dob: Union[str, date] | NotGiven = NOT_GIVEN,
-        email: str | NotGiven = NOT_GIVEN,
-        employee_id: str | NotGiven = NOT_GIVEN,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        first_name: str | NotGiven = NOT_GIVEN,
-        last_name: str | NotGiven = NOT_GIVEN,
-        org_id: int | NotGiven = NOT_GIVEN,
-        owner: bool | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        phone: str | NotGiven = NOT_GIVEN,
-        ssn: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        status: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        city: str | Omit = omit,
+        debit_id: str | Omit = omit,
+        dob: Union[str, date] | Omit = omit,
+        email: str | Omit = omit,
+        employee_id: str | Omit = omit,
+        employer_id: str | Omit = omit,
+        first_name: str | Omit = omit,
+        last_name: str | Omit = omit,
+        org_id: int | Omit = omit,
+        owner: bool | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        phone: str | Omit = omit,
+        ssn: str | Omit = omit,
+        state: str | Omit = omit,
+        status: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeUpdateResponse:
         """
         Update employee information based on the specified ID type and ID.
@@ -319,15 +319,15 @@ class EmployeeResource(SyncAPIResource):
         id: str,
         *,
         id_type: str,
-        admin_memo: str | NotGiven = NOT_GIVEN,
-        archived_at: Union[str, datetime] | NotGiven = NOT_GIVEN,
-        archived_reason: str | NotGiven = NOT_GIVEN,
+        admin_memo: str | Omit = omit,
+        archived_at: Union[str, datetime] | Omit = omit,
+        archived_reason: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeArchiveResponse:
         """Archive an employee based on the specified ID type and ID.
 
@@ -378,7 +378,7 @@ class EmployeeResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeBatchCreateResponse:
         """
         Submits employee basic information in a list and returns the complete employee
@@ -412,7 +412,7 @@ class EmployeeResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeGetPaymentMethodsResponse:
         """
         Retrieve the bank and debit card information of an employee based on the
@@ -451,7 +451,7 @@ class EmployeeResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeGetTransactionsResponse:
         """
         Retrieve the list of transactions for an employee based on the specified ID type
@@ -504,7 +504,7 @@ class EmployeeResource(SyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeUnarchiveResponse:
         """
         Unarchive an employee based on the specified ID type and ID.
@@ -571,13 +571,13 @@ class AsyncEmployeeResource(AsyncAPIResource):
         state: str,
         street_address1: str,
         zip: str,
-        middle_name: str | NotGiven = NOT_GIVEN,
+        middle_name: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeCreateResponse:
         """
         Submits employee basic information and returns the complete employee record.
@@ -658,7 +658,7 @@ class AsyncEmployeeResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> Employee:
         """
         Retrieve employee information based on the specified ID type and ID.
@@ -690,30 +690,30 @@ class AsyncEmployeeResource(AsyncAPIResource):
         id: str,
         *,
         id_type: str,
-        city: str | NotGiven = NOT_GIVEN,
-        debit_id: str | NotGiven = NOT_GIVEN,
-        dob: Union[str, date] | NotGiven = NOT_GIVEN,
-        email: str | NotGiven = NOT_GIVEN,
-        employee_id: str | NotGiven = NOT_GIVEN,
-        employer_id: str | NotGiven = NOT_GIVEN,
-        first_name: str | NotGiven = NOT_GIVEN,
-        last_name: str | NotGiven = NOT_GIVEN,
-        org_id: int | NotGiven = NOT_GIVEN,
-        owner: bool | NotGiven = NOT_GIVEN,
-        passport_account_id: str | NotGiven = NOT_GIVEN,
-        passport_customer_id: str | NotGiven = NOT_GIVEN,
-        phone: str | NotGiven = NOT_GIVEN,
-        ssn: str | NotGiven = NOT_GIVEN,
-        state: str | NotGiven = NOT_GIVEN,
-        status: str | NotGiven = NOT_GIVEN,
-        street_address1: str | NotGiven = NOT_GIVEN,
-        zip: str | NotGiven = NOT_GIVEN,
+        city: str | Omit = omit,
+        debit_id: str | Omit = omit,
+        dob: Union[str, date] | Omit = omit,
+        email: str | Omit = omit,
+        employee_id: str | Omit = omit,
+        employer_id: str | Omit = omit,
+        first_name: str | Omit = omit,
+        last_name: str | Omit = omit,
+        org_id: int | Omit = omit,
+        owner: bool | Omit = omit,
+        passport_account_id: str | Omit = omit,
+        passport_customer_id: str | Omit = omit,
+        phone: str | Omit = omit,
+        ssn: str | Omit = omit,
+        state: str | Omit = omit,
+        status: str | Omit = omit,
+        street_address1: str | Omit = omit,
+        zip: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeUpdateResponse:
         """
         Update employee information based on the specified ID type and ID.
@@ -805,15 +805,15 @@ class AsyncEmployeeResource(AsyncAPIResource):
         id: str,
         *,
         id_type: str,
-        admin_memo: str | NotGiven = NOT_GIVEN,
-        archived_at: Union[str, datetime] | NotGiven = NOT_GIVEN,
-        archived_reason: str | NotGiven = NOT_GIVEN,
+        admin_memo: str | Omit = omit,
+        archived_at: Union[str, datetime] | Omit = omit,
+        archived_reason: str | Omit = omit,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeArchiveResponse:
         """Archive an employee based on the specified ID type and ID.
 
@@ -864,7 +864,7 @@ class AsyncEmployeeResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeBatchCreateResponse:
         """
         Submits employee basic information in a list and returns the complete employee
@@ -898,7 +898,7 @@ class AsyncEmployeeResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeGetPaymentMethodsResponse:
         """
         Retrieve the bank and debit card information of an employee based on the
@@ -937,7 +937,7 @@ class AsyncEmployeeResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeGetTransactionsResponse:
         """
         Retrieve the list of transactions for an employee based on the specified ID type
@@ -990,7 +990,7 @@ class AsyncEmployeeResource(AsyncAPIResource):
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
-        timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
+        timeout: float | httpx.Timeout | None | NotGiven = not_given,
     ) -> EmployeeUnarchiveResponse:
         """
         Unarchive an employee based on the specified ID type and ID.
