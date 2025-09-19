@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2025-09-19)
+
+Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
+
+### Features
+
+* improve future compat with pydantic v3 ([16eacf1](https://github.com/felippemr/ambient-sdk/commit/16eacf1b306e97dbd443c2f37f8ce65c495d3026))
+* **types:** replace List[str] with SequenceNotStr in params ([5cdab6c](https://github.com/felippemr/ambient-sdk/commit/5cdab6c106764088147d1cc57e646451ec51bab4))
+
+
+### Chores
+
+* **internal:** add Sequence related utils ([2f24c92](https://github.com/felippemr/ambient-sdk/commit/2f24c929408989e52c329c6c529614161d1b536f))
+* **internal:** move mypy configurations to `pyproject.toml` file ([cf890d1](https://github.com/felippemr/ambient-sdk/commit/cf890d1dcc0660c1d3d2ca1a91c427518eee9a49))
+* **internal:** update pydantic dependency ([dfd75f3](https://github.com/felippemr/ambient-sdk/commit/dfd75f3eff6d455758a2fe101a337fc86ac22ec0))
+* **tests:** simplify `get_platform` test ([e0b41cf](https://github.com/felippemr/ambient-sdk/commit/e0b41cf581f39b528bbd847534e57e38d4ff42e8))
+* **types:** change optional parameter type from NotGiven to Omit ([444e945](https://github.com/felippemr/ambient-sdk/commit/444e945273ee41b30a1262063fa25e6be72223b5))
+
 ## 0.1.0-alpha.12 (2025-08-27)
 
 Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
