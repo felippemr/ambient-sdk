@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2025-09-20)
+
+Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
+
+### Chores
+
+* do not install brew dependencies in ./scripts/bootstrap by default ([993c5b0](https://github.com/felippemr/ambient-sdk/commit/993c5b07a23c317d29e7f82789457bc16000f9f5))
+
 ## 0.1.0-alpha.13 (2025-09-19)
 
 Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
