@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-10-11)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Chores
+
+* **internal:** detect missing future annotations with ruff ([7d413d3](https://github.com/felippemr/ambient-sdk/commit/7d413d33f7081f5d365e91de26de49b518158a15))
+
 ## 0.1.0-alpha.14 (2025-09-20)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
