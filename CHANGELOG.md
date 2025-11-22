@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-11-22)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Bug Fixes
+
+* **client:** close streams without requiring full consumption ([02f6cab](https://github.com/felippemr/ambient-sdk/commit/02f6cab20ed50b886cb89907b6260de5b1661bc0))
+* compat with Python 3.14 ([70b5de6](https://github.com/felippemr/ambient-sdk/commit/70b5de62f2fb3ffa3ee82daa7548cc048850c958))
+* **compat:** update signatures of `model_dump` and `model_dump_json` for Pydantic v1 ([eaf73c8](https://github.com/felippemr/ambient-sdk/commit/eaf73c8a752630d5bb57a6921a9537b1ac6d2b6b))
+
+
+### Chores
+
+* add Python 3.14 classifier and testing ([b674da6](https://github.com/felippemr/ambient-sdk/commit/b674da6591824742ab955a33bc5babadb6f02adf))
+* bump `httpx-aiohttp` version to 0.1.9 ([aa18abc](https://github.com/felippemr/ambient-sdk/commit/aa18abc1855d77ac05f8f415063100bbf6d60ae8))
+* **internal/tests:** avoid race condition with implicit client cleanup ([ce2b0cc](https://github.com/felippemr/ambient-sdk/commit/ce2b0ccc9f1407161fa48b7adf013f67fdf96659))
+* **internal:** detect missing future annotations with ruff ([7d413d3](https://github.com/felippemr/ambient-sdk/commit/7d413d33f7081f5d365e91de26de49b518158a15))
+* **internal:** grammar fix (it's -&gt; its) ([7315ce4](https://github.com/felippemr/ambient-sdk/commit/7315ce458cbb4124c37759a5ebcfea8b826caee2))
+* **package:** drop Python 3.8 support ([f9bfe72](https://github.com/felippemr/ambient-sdk/commit/f9bfe721ea9f83243a170108823799cf0e8db4bc))
+
 ## 0.1.0-alpha.14 (2025-09-20)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/felippemr/ambient-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
